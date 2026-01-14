@@ -19,7 +19,7 @@ The code provides the following entities to Home Assistant;
 * BM2 Battery Voltage (in volts)
 * BM2 Battery Charge (as a percentage)
 * BM2 Battery Presence (as a binary sensor)
-* BM2 Battery Last Updated (as a timestamp)
+* BM2 Battery Last Updated (as a timestamp) - this entity is disabled by default - you'll need to manually enable it if you want to use it.
 
 #  Example
 <img width="322" height="609" alt="image" src="https://github.com/user-attachments/assets/83ca2758-2487-455c-9c9b-4602473417da" />
