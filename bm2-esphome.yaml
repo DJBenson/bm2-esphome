@@ -32,6 +32,10 @@ globals:
     restore_value: no
     initial_value: "0"
 
+time:
+  - platform: homeassistant
+    id: ha_time
+
 esp32_ble_tracker:
   scan_parameters:
     interval: 1100ms
@@ -84,6 +88,9 @@ esp32_ble_tracker:
               id(bm2_last_publish_ms) = now;
               id(bm2_voltage).publish_state(voltage);
               id(bm2_charge).publish_state(charge);
+              if (id(ha_time).now().is_valid()) {
+                id(bm2_last_updated).publish_state(id(ha_time).now().timestamp);
+              }
             }
           }
 
@@ -100,12 +107,27 @@ sensor:
     unit_of_measurement: "%"
     device_class: battery
     state_class: measurement
+  - platform: template
+    name: "BM2 Battery Last Updated"
+    id: bm2_last_updated
+    device_class: timestamp
 
 binary_sensor:
   - platform: template
     name: "BM2 Battery Presence"
     id: bm2_presence
     device_class: presence
+
+text_sensor:
+  - platform: template
+    name: "BM2 Battery Last Updated"
+    update_interval: 5s
+    lambda: |-
+      if (id(bm2_last_publish_ms) == 0) {
+        return {"never"};
+      }
+      uint32_t age_s = (millis() - id(bm2_last_publish_ms)) / 1000;
+      return {to_string(age_s) + "s ago"};
 
 interval:
   - interval: 5s
