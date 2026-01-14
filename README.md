@@ -10,7 +10,7 @@ An ESPHome-based handler for BM2 battery monitors including voltage, state of ch
 # How to use
 * Copy [bm2_aes.h](https://raw.githubusercontent.com/DJBenson/bm2-esphome/refs/heads/main/bm2_aes.h) to your ESPHome configuration directory
 * Copy the example code to a new ESP32 device template in ESPHome
-* Update the following are update;
+* Ensure the following are update;
   * bm2_mac: The MAC address of the BM2 device to monitor (you can get this from the app for the device)
   * bm2_presence_timeout_s: The time (*in seconds*) since the last broadcast after which we consider the device "away". **Default: 120**.
   * bm2_publish_interval_s: The time (*in seconds*) between each broadcast - intended to slow down the number of updates to Home Assistant. The device itself reports every 10 seconds. **Default: 30**.
