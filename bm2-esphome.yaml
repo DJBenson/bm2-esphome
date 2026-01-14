@@ -111,6 +111,7 @@ sensor:
     name: "BM2 Battery Last Updated"
     id: bm2_last_updated
     device_class: timestamp
+    disabled_by_default: true
 
 binary_sensor:
   - platform: template
