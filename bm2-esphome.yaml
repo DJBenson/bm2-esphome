@@ -1,6 +1,6 @@
 substitutions:
   devicename: bm2-ble
-  bm2_mac: "50:54:7B:22:41:73"
+  bm2_mac: "AB:CD:EF:00:01:02"
   bm2_presence_timeout_s: "120"
   bm2_publish_interval_s: "30"
 
