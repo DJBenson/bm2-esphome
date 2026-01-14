@@ -14,5 +14,12 @@ An ESPHome-based handler for BM2 battery monitors including voltage, state of ch
   * bm2_presence_timeout_s: The time (*in seconds*) since the last broadcast after which we consider the device "away". **Default: 120**.
   * bm2_publish_interval_s: The time (*in seconds*) between each broadcast - intended to slow down the number of updates to Home Assistant. The device itself reports every 10 seconds. **Default: 30**.
 
+# Provided entities 
+The code provides the following entities to Home Assistant;
+* BM2 Battery Voltage (in volts)
+* BM2 Battery Charge (as a percentage)
+* BM2 Battery Presence (as a binary sensor)
+* BM2 Battery Last Updated (as a timestamp)
+
 #  Example
-<img width="320" height="561" alt="image" src="https://github.com/user-attachments/assets/db5a5fc2-b2da-426f-9296-1f06890923f9" />
+<img width="322" height="609" alt="image" src="https://github.com/user-attachments/assets/83ca2758-2487-455c-9c9b-4602473417da" />
