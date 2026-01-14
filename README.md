@@ -5,6 +5,7 @@ An ESPHome-based handler for BM2 battery monitors including voltage, state of ch
 * [Home Assistant](https://home-assistant.io) and [ESPHome](https://esphome.io)
 * BMS battery monitor (like [this](https://www.aliexpress.com/item/1005008058900833.html) or [this](https://amzn.to/3NrcjGY))
 * ESP32 device close enough to your BM2 battery monitor to receive the BLE packets
+* Tested with (and probably requires) the IDF framework - I've not tested with the Arduino framework
 
 # How to use
 * Copy [bm2_aes.h](https://raw.githubusercontent.com/DJBenson/bm2-esphome/refs/heads/main/bm2_aes.h) to your ESPHome configuration directory
