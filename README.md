@@ -1,6 +1,12 @@
 # bm2-esphome
 An ESPHome-based handler for BM2 battery monitors including voltage, state of charge and presence.
 
+## 💖 Support this project
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-pink?logo=github)](https://github.com/sponsors/DJBenson)
+[![Ko-fi](https://img.shields.io/badge/Support-Ko--fi-ff5f5f?logo=ko-fi)](https://ko-fi.com/djbenson)
+[![PayPal](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://paypal.me/jonathanthomson81)
+
 # Requirements
 * [Home Assistant](https://home-assistant.io) and [ESPHome](https://esphome.io)
 * BMS battery monitor (like [this](https://www.aliexpress.com/item/1005008058900833.html) or [this](https://amzn.to/3NrcjGY))
